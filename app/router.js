@@ -6,6 +6,8 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('contributors');
+  this.route('github');
 });
 
 export default Router;
