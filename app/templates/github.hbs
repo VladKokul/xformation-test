@@ -1,27 +1,29 @@
-<div class="container">
-    <h2>Hover Rows</h2>
-    <p>The .table-hover class enables a hover state on table rows:</p>
-    <table class="table table-hover">
-        <thead>
-        <tr>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Forks</th>
-            <th>Link</th>
-        </tr>
-        </thead>
-        <tbody>
-        {{#each model as |repo|}}
+<div class="wrapper-block">
+    <div class="container">
+        {{nav-buttons}}
+
+        <table class="table table-hover">
+            <thead>
             <tr>
-                <td>{{repo.name}}</td>
-                <td>{{repo.description}}</td>
-                <td>{{repo.forks}}</td>
-                <td> <a target="_blank" href="{{repo.html_url}}"><img src="/images/GitHub-Mark.png"></a></td>
-
-
+                <th>Name</th>
+                <th>Description</th>
+                <th>Forks</th>
+                <th>Link</th>
             </tr>
-        {{/each}}
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+            {{#each model as |repo|}}
+                <tr>
+                    <td>{{repo.name}}</td>
+                    <td>{{repo.description}}</td>
+                    <td>{{repo.forks}}</td>
+                    <td><a target="_blank" href="{{repo.html_url}}"><img src="/images/GitHub-Mark.png"></a></td>
+
+
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    </div>
 </div>
 {{outlet}}
